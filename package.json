@@ -12,9 +12,7 @@
     "@nestjs/core": "^6.4.1",
     "@nestjs/platform-express": "^6.4.1",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.3.3"
-  },
-  "devDependencies": {
+    "rxjs": "^6.3.3",
     "@nestjs/testing": "^6.4.1",
     "@types/express": "^4.16.0",
     "@types/jest": "^23.3.13",
