@@ -1,20 +1,8 @@
 # Nest.js dependency graph
 
-## Running from this repo
-```$bash
-npm run start:v6 ~/path-to-my-app/dist/app/application.module.js
-```
-
-
 ## Installing as dependency
-#### NEST V5
 ```$bash
-npm i https://github.com/shipiak/nestjs-dependency-graph.git#v5 --save-dev
-```
-
-#### NEST V6
-```$bash
-npm i https://github.com/shipiak/nestjs-dependency-graph.git#v6 --save-dev
+npm i https://github.com/shipiak/nestjs-dependency-graph.git --save-dev
 ```
 
 ### Add to package.json scripts

@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json && cp src/index.html dist/index.html",
-    "start:v6": "npm run build && node dist/index.js",
-    "start:v5": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/index.js"
   },
   "dependencies": {
   },
