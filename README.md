@@ -8,16 +8,17 @@ npm i https://github.com/shipiak/nestjs-dependency-graph.git --save-dev
 ### Add to package.json scripts
 ```
   "scripts": {
-    "nest-dep-graph": "ts-node --files node_modules/ src/path/to/my-root.module.ts"
+    "nest-dep-graph": "node node_modules/nestjs-dependency-graph/dist/index.js dist/app/app.module.js"
   }
 ```
 
-don't forget to add correct path to your root module
+Don't forget to update correct path to your root app.module file
 
 
 ### Run
 ```
-  npm run nest-dep-graph
+  npm run build
+  npm run nest-dep-graph 
 ```
 
-goto http//:localhost:3000
+Open `http//:localhost:3000`
