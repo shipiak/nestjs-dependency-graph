@@ -1,8 +1,14 @@
 # Nest.js dependency graph
 
 ### Install
+#### NEST V5
 ```$bash
-npm i https://github.com/shipiak/nestjs-dependency-graph.git --save-dev
+npm i https://github.com/shipiak/nestjs-dependency-graph.git#v5 --save-dev
+```
+
+#### NEST V6
+```$bash
+npm i https://github.com/shipiak/nestjs-dependency-graph.git#v6 --save-dev
 ```
 
 ### Add to package.json scripts
