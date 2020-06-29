@@ -1,5 +1,5 @@
 import { DynamicModule, Injectable } from '@nestjs/common';
-import { GLOBAL_MODULE_METADATA, METADATA } from '@nestjs/common/constants';
+import { GLOBAL_MODULE_METADATA, MODULE_METADATA } from '@nestjs/common/constants';
 
 interface ModuleData {
   module: any;
@@ -46,10 +46,10 @@ export class DependencyGraphService {
     const data: ModuleData = {
       module,
       meta: {
-        imports: await Promise.all(getMeta(METADATA.IMPORTS).map(m => this.scanModule(m))),
-        providers: getMeta(METADATA.PROVIDERS),
-        controllers: getMeta(METADATA.CONTROLLERS),
-        exports: getMeta(METADATA.EXPORTS),
+        imports: await Promise.all(getMeta(MODULE_METADATA.IMPORTS).map(m => this.scanModule(m))),
+        providers: getMeta(MODULE_METADATA.PROVIDERS),
+        controllers: getMeta(MODULE_METADATA.CONTROLLERS),
+        exports: getMeta(MODULE_METADATA.EXPORTS),
         isGlobal: !!Reflect.getMetadata(GLOBAL_MODULE_METADATA, module),
 
       },
