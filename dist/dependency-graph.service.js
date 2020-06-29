@@ -9,14 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DependencyGraphService = void 0;
 const common_1 = require("@nestjs/common");
 const constants_1 = require("@nestjs/common/constants");
 let DependencyGraphService = class DependencyGraphService {
@@ -47,10 +49,10 @@ let DependencyGraphService = class DependencyGraphService {
             const data = {
                 module,
                 meta: {
-                    imports: yield Promise.all(getMeta(constants_1.METADATA.IMPORTS).map(m => this.scanModule(m))),
-                    providers: getMeta(constants_1.METADATA.PROVIDERS),
-                    controllers: getMeta(constants_1.METADATA.CONTROLLERS),
-                    exports: getMeta(constants_1.METADATA.EXPORTS),
+                    imports: yield Promise.all(getMeta(constants_1.MODULE_METADATA.IMPORTS).map(m => this.scanModule(m))),
+                    providers: getMeta(constants_1.MODULE_METADATA.PROVIDERS),
+                    controllers: getMeta(constants_1.MODULE_METADATA.CONTROLLERS),
+                    exports: getMeta(constants_1.MODULE_METADATA.EXPORTS),
                     isGlobal: !!Reflect.getMetadata(constants_1.GLOBAL_MODULE_METADATA, module),
                 },
             };

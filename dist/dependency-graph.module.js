@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.DependencyGraphModule = void 0;
 const common_1 = require("@nestjs/common");
 const dependency_graph_service_1 = require("./dependency-graph.service");
 const dependency_graph_controller_1 = require("./dependency-graph.controller");
