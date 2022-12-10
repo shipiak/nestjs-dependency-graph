@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@nestjs/common": "^5.7.4",
-    "@nestjs/core": "^5.7.4",
-    "@nestjs/platform-express": "^6.0.0",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/platform-express": "^9.2.1",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.3.3",
